@@ -1,7 +1,7 @@
 #include <stdio.h>
 	/**
-	*main - function makes use of
-	*the puts option to display a string
+	* main - function makes use of
+	* the puts option to display a string
 	*/
 int main(void)
 {
