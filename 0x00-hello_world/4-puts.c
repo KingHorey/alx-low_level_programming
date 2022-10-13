@@ -1,6 +1,6 @@
 #include <stdio.h>
 	/**
-	*function makes use of
+	*main - function makes use of
 	*the puts option to display a string
 	*/
 int main(void)
