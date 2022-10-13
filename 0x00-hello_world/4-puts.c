@@ -1,8 +1,8 @@
 #include <stdio.h>
 	/**
-	*main - start and end point of all
+	* main - start and end point of all
 	*
-	*Return: 0 if successful, 1 if otherwise
+	* Return: 0 if successful, 1 if otherwise
 	*/
 int main(void)
 {
