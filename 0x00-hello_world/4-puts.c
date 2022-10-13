@@ -1,9 +1,8 @@
 #include <stdio.h>
 	/**
-	* main - function makes use of
-	* the puts option to display a string
+	*main - function makes use of the puts option to display a *string
 	*
-	* Return: 0 if successful, 1 if otherwise
+	*Return: 0 if successful, 1 if otherwise
 	*/
 int main(void)
 {
