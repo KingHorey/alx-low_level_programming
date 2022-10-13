@@ -1,6 +1,6 @@
 #include <stdio.h>
 	/**
-	*main - function makes use of the puts option to display a *string
+	*main - start and end point of all functions. Here, puts option *to display a *string
 	*
 	*Return: 0 if successful, 1 if otherwise
 	*/
