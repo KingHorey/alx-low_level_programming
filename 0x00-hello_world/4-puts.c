@@ -2,7 +2,7 @@
 	/**
 	* main - function makes use of
 	* the puts option to display a string
-	* Return - 0 if successful
+	* Return: 0 if successful
 	*/
 int main(void)
 {
