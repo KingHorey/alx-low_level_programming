@@ -10,17 +10,13 @@ int main(void)
 {
 	int n = 97;
 
-	while (n <= 122)
+	for (n; n <= 122; n++)
 	{
-	if ((n == 101) && (n == 84))
-	{
-	continue;
+		if ((n == 101) || (n == 113))
+		{
+			continue;
+		}
+		putchar(n);
 	}
-	else
-	{
-	putchar(n);
-	}
-	}
-	putchar(10);
+	return (0);
 }
-
