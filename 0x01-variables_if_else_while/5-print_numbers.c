@@ -1,0 +1,16 @@
+#include <stdio.h>
+/**
+ * main - Start function
+ * Description - function prints out numbers from 1 through to 9
+ * Return: 0 if successful and 1 if fails
+ */
+
+int main(void)
+{
+	for (register int i = 0; i < 10; i++)
+	{
+	printf("%d", i);
+	}
+	puts("\n");
+	return (0);
+}
