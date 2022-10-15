@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - function prints comma separated integers in ascending order
  * Return: 0 if successful
@@ -21,12 +22,13 @@ int main(void)
 	if (n == '9')
 	{
 	putchar(n);
+	write(1, "\n");
 	}
 	else
 	{
 	putchar(n);
 	putchar(comma);
-	putchar(space);
+		putchar(space);
 	}
 	}
 	return (0);
