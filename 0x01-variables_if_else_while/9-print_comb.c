@@ -19,19 +19,16 @@ int main(void)
 
 	for (n = '0'; n <= end_point; n++)
 	{
+	putchar(n);
 	if (n == '9')
 	{
-	putchar(n);
-	write(1, "\n");
+	putchar(10);
 	}
-	else
-	{
-	putchar(n);
 	putchar(comma);
 	putchar(space);
 	}
-	}
 	return (0);
 }
+
 
 
