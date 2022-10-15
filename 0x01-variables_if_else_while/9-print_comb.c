@@ -22,7 +22,7 @@ int main(void)
 	if (n == '9')
 	{
 	putchar(n);
-	write(1, "\n");
+	fwrite(1, "\n");
 	}
 	else
 	{
