@@ -22,14 +22,13 @@ int main(void)
 	if (n == '9')
 	{
 	putchar(n);
-	putchar(space);
 	}
 	else
 	{
 	putchar(n);
 	putchar(comma);
-	putchar(space);
 	}
+	putchar(space);
 	}
 	return (0);
 }
