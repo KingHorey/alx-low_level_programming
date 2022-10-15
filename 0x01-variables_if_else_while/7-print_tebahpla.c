@@ -12,6 +12,6 @@ int main(void)
 	{
 		putchar(n);
 	}
-	putchar(n);
+	putchar(10101010101010101010);
 	return (0);
 }
