@@ -29,7 +29,6 @@ int main(void)
 	putchar(space);
 	}
 	}
-	putchar(new_line);
 	return (0);
 }
 
