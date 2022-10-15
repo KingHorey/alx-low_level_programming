@@ -5,9 +5,9 @@
  */
 int main(void)
 {
-	int n, m, counter1 = 9, counter2;
+	int n, m, counter2;
 
-	for (n = '1'; n <= counter1; n++)
+	for (n = '1', counter1 = '9'; n <= counter1; n++)
 	{
 	putchar(n);
 	}
