@@ -15,7 +15,7 @@ int main(void)
 	 * new_line is the variable that stores the ASCII value for a new line
 	 */
 
-	for (n = 0; n <= end_point; n++)
+	for (n = '0'; n <= end_point; n++)
 	{
 	putchar(n);
 	putchar(comma);
