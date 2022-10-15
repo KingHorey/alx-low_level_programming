@@ -7,11 +7,11 @@ int main(void)
 {
 	int n, m, counter2, counter1;
 
-	for (n = '1', counter1 = '9'; n <= counter1; n++)
+	for (n = '0', counter1 = '9'; n <= counter1; n++)
 	{
 	putchar(n);
 	}
-	for (m = 'a', counter2 = 'e'; m <= counter2 ; m++)
+	for (m = 'a', counter2 = 'f'; m <= counter2 ; m++)
 	{
 	putchar(m);
 	}
