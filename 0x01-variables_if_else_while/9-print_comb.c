@@ -22,7 +22,7 @@ int main(void)
 	putchar(comma);
 	putchar(space);
 	}
-	putchar(10);
+	putchar(new_line);
 	return (0);
 }
 
