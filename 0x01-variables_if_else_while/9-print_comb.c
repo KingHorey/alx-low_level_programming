@@ -19,13 +19,13 @@ int main(void)
 
 	for (n = '0'; n <= end_point; n++)
 	{
+	putchar(n);
 	if (n == '9')
 	{
-	putchar(n);
+	break;
 	}
 	else
 	{
-	putchar(n);
 	putchar(comma);
 	}
 	putchar(space);
