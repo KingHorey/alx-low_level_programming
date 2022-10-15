@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int comma = 44, end_point = '9', space = 32, new_line = 10;
+	int comma = 44, end_point = '9', space = 32;
 	int n;
 
 	/**
