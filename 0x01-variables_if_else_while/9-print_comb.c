@@ -18,11 +18,19 @@ int main(void)
 
 	for (n = '0'; n <= end_point; n++)
 	{
+	if (n == '9')
+	{
+	putchar(n);
+	}
+	else
+	{
 	putchar(n);
 	putchar(comma);
 	putchar(space);
 	}
+	}
 	putchar(new_line);
 	return (0);
 }
+
 
