@@ -6,7 +6,8 @@
  */
 int main(void)
 {
-	int n, comma = 44, end_point = 9, space = 32, new_line = 10;
+	int comma = 44, end_point = '9', space = 32, new_line = 10;
+	int n;
 
 	/**
 	 * N is the start_point for the integer to be printed
@@ -21,7 +22,7 @@ int main(void)
 	putchar(comma);
 	putchar(space);
 	}
-	putchar(new_line);
+	putchar(10);
 	return (0);
 }
 
