@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	int n, m, counter2;
+	int n, m, counter2, counter1;
 
 	for (n = '1', counter1 = '9'; n <= counter1; n++)
 	{
