@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
 * main - start point for source code
 * Description: send _putchar to stdout without using
@@ -17,5 +18,6 @@ int main(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
+
 	return (0);
 }
