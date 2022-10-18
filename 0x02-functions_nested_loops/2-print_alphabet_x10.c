@@ -5,8 +5,9 @@
  */
 
 void print_alphabet_x10(void)
-{
-	for (register int counter = 0; counter < 10; counter++)
+{	
+	int counter;
+	for (counter = 0; counter < 10; counter++)
 	{
 		int x = 'a';
 
