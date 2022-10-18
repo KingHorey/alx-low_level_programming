@@ -9,7 +9,7 @@ int _islower(int c)
 {
 	int checker;
 
-	checker = islower(c);
+	checker = _islower(c);
 	_putchar(checker);
 }
 
