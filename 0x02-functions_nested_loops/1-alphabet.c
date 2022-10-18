@@ -14,16 +14,3 @@ while (x <= 'z')
 }
 }
 
-/**
- * main - function execution for defined
- * print_alphabet function
- *
- * Return: 0 if successful
- */
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-
