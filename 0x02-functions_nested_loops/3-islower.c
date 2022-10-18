@@ -11,5 +11,6 @@ int _islower(int c)
 
 	checker = _islower(c);
 	_putchar(checker);
+	return (0);
 }
 
