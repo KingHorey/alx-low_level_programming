@@ -1,15 +1,15 @@
 #include "main.h"
 /**
  * _abs-function checks for absolute value
- * @int: value to be checked
+ * @c: value to be checked
  * Return: positive value of int
  */
 
-int _abs(int)
+int _abs(int c)
 {
-	int c;
+	int r;
 
-	c = _abs(int);
+	r = _abs(c);
 	_putchar(c);
 	_putchar('\n');
 }
