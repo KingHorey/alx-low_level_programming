@@ -8,13 +8,14 @@
 
 int _islower(int c)
 {
-	c = _islower('H');
-	_putchar(c + 'O');
-	c = _islower('o');
-	_putchar(c + 'O');
-	c = _islower(108);
-	_putchar(c + 'O');
-	_putchar('\n');
+	if ((c >= 97) && (c <= 122))
+	{
+		return (0);
+	}
+	else
+	{
+		return (1);
+	}
 	return (0);
 }
 
