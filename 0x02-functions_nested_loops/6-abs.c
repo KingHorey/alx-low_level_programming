@@ -11,7 +11,7 @@ int _abs(int c)
 {
 	int r;
 
-	r = _abs(c);
+	r = abs(c);
 	printf("%d\n", r);
 	return (0);
 }
