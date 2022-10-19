@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _print_sign- prototyped function
+ * print_sign- prototyped function
  * @c: argument that passes the variable to be checked
  *
  * Description: checks the argument and returns a value and a sign
@@ -10,23 +10,23 @@
  * 0 for equals to zero
  */
 
-int _print_sign(int c)
+int print_sign(int n)
 {
-	if (c > 0)
+	if (n > 0)
 	{
 		_putchar('+');
 		_putchar(',');
 		_putchar(' ');
 		return (1);
 	}
-	if (c < 0)
+	if (n < 0)
 	{
 	_putchar('-');
 	_putchar(',');
 	_putchar(' ');
 	return (-1);
 	}
-	if (c == 0)
+	if (n == 0)
 	{
 	_putchar(0);
 	_putchar(',');
