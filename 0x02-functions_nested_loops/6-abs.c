@@ -11,8 +11,7 @@ int _abs(int c)
 	int r;
 
 	r = _abs(c);
-	printf("%d", r);
-	_putchar('\n');
+	printf("%d\n", r);
 	return (0);
 }
 
