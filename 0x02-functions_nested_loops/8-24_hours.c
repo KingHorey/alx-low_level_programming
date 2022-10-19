@@ -1,35 +1,26 @@
 #include "main.h"
-#include <stdio.h>
 /**
- * jack_bauer- function prints the time in 24hours
- */
-
+* jack_bauer - function
+*/
 void jack_bauer(void)
 {
-	unsigned short int hh;
-	unsigned short int mm;
+	int hour, h1, h2, min, m1, m2;
 
-	for (hh = 00 ; hh < 24; hh++)
+	for (hour = 0; hour <= 23; ++hour)
 	{
-		for (mm = 00; mm < 60; mm++)
+		h1 = hour / 10;
+		h2 = hour % 10;
+		for (min = 0; min < 60; ++min)
 		{
-			if ((hh <= 10) && (mm < 10))
-			{
-				printf("%02d:%02d\n", hh, mm);
-			}
-			else if ((hh <= 10) && (mm >= 10))
-			{
-				printf("%02d:%02d\n", hh, mm);
-			}
-			else if ((hh > 10) && (mm < 10))
-			{
-				printf("%d:%02d\n", hh, mm);
-			}
-			else
-			{
-				printf("%d:%d\n", hh, mm);
-			}
+			m1 = min / 10;
+			m2 = min % 10;
+			_putchar(h1 + '0');
+			_putchar(h2 + '0');
+			_putchar(':');
+			_putchar(m1 + '0');
+			_putchar(m2 + '0');
+			_putchar(10);
 		}
+		min = 0;
 	}
 }
-
