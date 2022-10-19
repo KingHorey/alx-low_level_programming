@@ -8,15 +8,13 @@
 
 int _islower(int c)
 {
-	char checker[] = {'H', 'o', 'O', 'm'};
-	int i;
-	char checkers;
-	
-	for(i=0; checker[i];i++)
-	{
-	checkers = _islower(checker[i]);
-	_putchar(checkers);
-	}
+	c = _islower('H);
+	_putchar(r + 'O');
+	c = _islower('o');
+	_putchar(r + 'O');
+	c = _islower(108);
+	_putchar(r + 'O');
+	_putchar('\n');
 	return (0);
 }
 
