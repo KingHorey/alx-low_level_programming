@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _abs-function checks for absolute value
  * @c: value to be checked
