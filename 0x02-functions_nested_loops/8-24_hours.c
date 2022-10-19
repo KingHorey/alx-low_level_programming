@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * jack_bauer- function prints the time in 24hours
  */
