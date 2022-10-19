@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_sign- prototyped function
- * @c: argument that passes the variable to be checked
+ * @n: argument that passes the variable to be checked
  *
  * Description: checks the argument and returns a value and a sign
  * indicating the side of 0 the value is
@@ -24,7 +24,6 @@ int print_sign(int n)
 	}
 	else
 	{
-	_putchar(0);
 	return (0);
 	};
 }
