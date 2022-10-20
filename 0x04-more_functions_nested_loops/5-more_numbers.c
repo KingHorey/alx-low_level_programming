@@ -8,13 +8,13 @@
  */
 void more_numbers(void)
 {
-	int numbers, counter = '0';
+	int numbers, counter;
 
 	for (counter = '0'; counter < '10'; counter++)
 	{
-		for (number = '0'; numbers < '15'; numbers++)
+		for (numbers = '0'; numbers < '15'; numbers++)
 		{
-			_putchar(number);
+			_putchar(numbers);
 		}
 	_putchar(10);
 	}
