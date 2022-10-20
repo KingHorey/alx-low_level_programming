@@ -12,7 +12,6 @@ void print_numbers(void)
 	{
 		_putchar(num + '0');
 	}
-	_putchar(32);
-	return (0);
+	_putchar(10);
 }
 
