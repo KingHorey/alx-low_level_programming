@@ -39,7 +39,7 @@ int main(void)
 			putchar(' ');
 		}
 	}
-	puts("\n");
+	putchar(10);
 	return (0);
 }
 
