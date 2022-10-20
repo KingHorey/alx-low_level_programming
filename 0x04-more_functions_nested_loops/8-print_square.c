@@ -3,7 +3,7 @@
  * print_square - prints '#' the number of times specified by the user
  * both row and column
  *
- * @size- number of times '#' is to be printed
+ * @size: number of times '#' is to be printed
  */
 
 void print_square(int size)
@@ -19,7 +19,7 @@ void print_square(int size)
 		for (outer = 0; outer < size; outer++)
 		{
 			_putchar('#');
-			for (inner = 1; inner < n; inner++)
+			for (inner = 1; inner < size; inner++)
 			{
 				_putchar('#');
 			}
