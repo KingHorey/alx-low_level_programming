@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * _isupper- checks for upper case letters
+ * @c: int/char to be evaluated
  * Return: 1 if uppercase
  * 0 if lowercase
  */
@@ -15,6 +16,5 @@ int _isupper(int c)
 	{
 		return (0);
 	}
-	_putchar('\n);
 }
 
