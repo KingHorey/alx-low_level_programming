@@ -7,7 +7,7 @@
  */
 void print_line(int n)
 {
-	unsigned short int x;
+	int x;
 
 	for (x = 0; x < n; x++)
 	{
@@ -23,3 +23,4 @@ void print_line(int n)
 	_putchar(10);
 	return (0);
 }
+
