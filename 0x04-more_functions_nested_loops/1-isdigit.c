@@ -6,11 +6,9 @@ include"main.h"
  * 0 if otherwise
  */
 
-int _isdigit(int c)	
+int _isdigit(int c)
 {
-	char r = c;
-
-	if ((r >= '0') && (r <= '9'))
+	if ((c >= '0') && (c <= '9'))
 	{
 		return (1);
 	}
