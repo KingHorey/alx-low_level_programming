@@ -2,7 +2,7 @@
 /**
  *main - start function
  * Description: prints out integers from 1 to 100
- * but replaces multiples of 3 with 'Fizz' and that of 
+ * but replaces multiples of 3 with 'Fizz' and that of
  * 5 with 'Buzz'
  *
  * Return: 0
