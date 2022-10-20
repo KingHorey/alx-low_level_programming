@@ -21,6 +21,5 @@ void print_line(int n)
 		}
 	}
 	_putchar(10);
-	return (0);
 }
 
