@@ -18,10 +18,10 @@ void print_most_numbers(void)
 		}
 		else
 		{
-			putchar(num + '0');
+			_putchar(num + '0');
 		}
 	}
-	putchar('\n');
+	_putchar(10);
 	return (0);
 }
 
