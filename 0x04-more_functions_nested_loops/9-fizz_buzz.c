@@ -34,9 +34,12 @@ int main(void)
 		{
 			printf("%d", numbers);
 			putchar(' ');
+			if (numbers == 100)
+			{
+				break;
+			}
 		}
 	}
-	putchar(10);
 	return (0);
 }
 
