@@ -18,27 +18,20 @@ int main(void)
 		if ((numbers % 3 == 0) && (numbers % 5 == 0))
 		{
 			printf("FizzBuzz");
-			putchar(' ');
 		}
 		else if (numbers % 3 == 0)
 		{
 			printf("Fizz");
-			putchar(' ');
 		}
 		else if (numbers % 5 == 0)
 		{
 			printf("Buzz");
-			putchar(' ');
 		}
 		else
 		{
 			printf("%d", numbers);
-			putchar(' ');
-			if (numbers == 100)
-			{
-				break;
-			}
 		}
+		putchar(' ');
 	}
 	return (0);
 }
