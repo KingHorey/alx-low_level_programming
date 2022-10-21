@@ -19,13 +19,18 @@ int main(void)
 		{
 			printf("FizzBuzz");
 			putchar(' ');
+			if (numbers % 3 == 0)
+			{
+				printf("Fizz");
+				putchar(' ');
+			}
 		}
-		if (numbers % 3 == 0)
+		else if (numbers % 3 == 0)
 		{
 			printf("Fizz");
 			putchar(' ');
 		}
-		if (numbers % 5 == 0)
+		else if (numbers % 5 == 0)
 		{
 			printf("Buzz");
 			putchar(' ');
