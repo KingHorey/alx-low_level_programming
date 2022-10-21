@@ -17,22 +17,26 @@ int main(void)
 	{
 		if ((numbers % 3 == 0) && (numbers % 5 == 0))
 		{
-			printf("FizzBuzz");
+			printf(" FizzBuzz");
 		}
 		else if (numbers % 3 == 0)
 		{
-			printf("Fizz");
+			printf(" Fizz");
 		}
 		else if (numbers % 5 == 0)
 		{
-			printf("Buzz");
+			printf(" Buzz");
 		}
-		else
+		else if (numbers == 1)
 		{
 			printf("%d", numbers);
 		}
-		putchar(' ');
+		else
+		{
+			printf(" %d", numbers);
+		}
 	}
+	putchar(10);
 	return (0);
 }
 
