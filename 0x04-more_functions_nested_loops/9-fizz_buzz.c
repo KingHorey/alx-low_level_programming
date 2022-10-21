@@ -19,11 +19,6 @@ int main(void)
 		{
 			printf("FizzBuzz");
 			putchar(' ');
-			if (numbers % 3 == 0)
-			{
-				printf("Fizz");
-				putchar(' ');
-			}
 		}
 		else if (numbers % 3 == 0)
 		{
