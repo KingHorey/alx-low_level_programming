@@ -13,12 +13,8 @@ int main(void)
 {
 	int numbers;
 
-	for (numbers = 0; numbers < 101; numbers++)
+	for (numbers = 1; numbers < 101; numbers++)
 	{
-		if (numbers == 0)
-		{
-			continue;
-		}
 		if ((numbers % 3 == 0) && (numbers % 5 == 0))
 		{
 			printf("FizzBuzz");
@@ -29,7 +25,7 @@ int main(void)
 			printf("Fizz");
 			putchar(' ');
 		}
-		else if (numbers % 5 == 0)
+		if (numbers % 5 == 0)
 		{
 			printf("Buzz");
 			putchar(' ');
