@@ -1,4 +1,4 @@
-#include "_putchar.c"
+#include "main.h"
 /**
  * _puts- function prints the strings
  * @str: string to be printed
