@@ -6,10 +6,14 @@
 
 int _strlen(char *s)
 {
-	int length;
+	int l = 0;
 
-	length = _strlen(s);
-	_putchar((length / 10) + '0');
-	_putchar((length % 10) + '0');
-	return (0);
+	while (*s)
+	{
+		s++;
+		l++;
+	}
+
+	return (l);
 }
+
