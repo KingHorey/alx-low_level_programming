@@ -10,7 +10,7 @@ int _strcmp(char *s1, char *s2);
 void reverse_array(int *a, int n);
 int _intlen(int *s);
 char *string_toupper(char *);
-
+char *cap_string(char *x);
 
 
 #endif
