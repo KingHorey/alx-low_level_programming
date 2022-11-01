@@ -14,7 +14,7 @@ char *_strchr(char *s, char c)
 	for (index = 0; s[index] != '\0'; index++)
 	{
 		if (*(s + index) == c)
-		{	
+		{
 			for (inner = index; s[inner] != '\0'; inner++)
 			{
 				_putchar(*(s + inner));
@@ -22,7 +22,5 @@ char *_strchr(char *s, char c)
 			break;
 		}
 	}
-	
-
+	return (NULL);
 }
-
