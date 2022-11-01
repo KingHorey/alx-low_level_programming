@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * _strchr- print occurence of a char
  * @s: arrayto be scanned
