@@ -1,10 +1,9 @@
 #include "main.h"
 /**
- * _sqrt_recursion - recursively find the square root of a number
- * @n: integer to be evaluated
- * Return: The square root
- */
-
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: number
+ * Return: integer
+*/
 int _sqrt_recursion(int n)
 {
 	return (square(n, 1));
