@@ -7,17 +7,8 @@
  *
  */
 
-int main(int argc, char *argv[])
+int main(int argc __attribute__((unused)), char *argv[])
 {
-	if (argc)
-	{
-		int i = 0;
-
-		while (argv[0][i])
-		{
-			printf("%c", argv[0][i]);
-			i++;
-		}
-	}
+	printf("%s\n", argv[0]);
 	return (0);
 }
