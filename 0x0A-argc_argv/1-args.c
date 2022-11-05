@@ -3,14 +3,13 @@
  * main - start point of program
  * @argc: argument count
  * @argv: array containing all arguments
- * @Return: 0 if successful
+ * Return: 0 if successful
  *
  */
 
 int main(int argc, char __attribute__((unused)) *argv[])
 {
-	printf("%d", argc - 1);
-
+	printf("%d\n", argc - 1);
 	return (0);
 
 }
