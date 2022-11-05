@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 		while (argv[0][i])
 		{
-			_putchar (argv[0][i]);
+			printf("%c", argv[0][i]);
 			i++;
 		}
 	}
