@@ -16,7 +16,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL)
 		s1 = "";
-	       
+
 	if (s2 == NULL)
 		s2 = "";
 
@@ -27,7 +27,7 @@ char *str_concat(char *s1, char *s2)
 	str = malloc(sizeof(char) * (lensum + 1));
 
 	if (str == NULL)
-		return(NULL);
+		return (NULL);
 
 	for (i = 0; i < len1; i++)
 	{
