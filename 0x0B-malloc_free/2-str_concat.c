@@ -14,14 +14,20 @@ char *str_concat(char *s1, char *s2)
 
 	int count = 0, len1, len2, i, lensum;
 
-	if (s1 == NULL || s2 == NULL)
-		return ("");
+	if (s1 == NULL)
+		s1 = "";
+	       
+	if (s2 == NULL)
+		s2 = "";
 
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 	lensum = len1 + len2;
 
 	str = malloc(sizeof(char) * (lensum + 1));
+
+	if (str == NULL)
+		return(NULL);
 
 	for (i = 0; i < len1; i++)
 	{
