@@ -1,6 +1,14 @@
 #include "main.h"
 #include <stdlib.h>
 
+/**
+ * string_nconcat- concatenates string s1 and s2 to new pointer
+ * @s1: first string literal
+ * @s2: second string literal
+ * @n: number of bytes to concat with
+ * Return: new memory with concatenated string
+ */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i = 0, len1 = 0, len2 = 0, i2 = 0;
@@ -21,7 +29,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	else
 		str = malloc(sizeof(char) * (len1 + len2 + 1));
 
-	
 	if (str == NULL)
 		return (NULL);
 
