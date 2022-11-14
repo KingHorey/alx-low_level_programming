@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -15,5 +14,8 @@ int main(void)
 
 	for (i = 0; i < len; i++)
 		_putchar(0 + __BASE_FILE__[i]);
-	printf("\n");
+
+	_putchar(10);
+
+	return (0);
 }
