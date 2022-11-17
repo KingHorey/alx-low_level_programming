@@ -1,13 +1,11 @@
 #include <stdio.h>
 /**
- * main- start point
- * @argc: number of arguments passed into main
- * @argv: strings passed to command line
- * Return: 0 if successful
- *
+ *main - recieves the program name as a parameter and prints it out
+ *@argc: argument count
+ *@argv: array of strings
+ *Return: 0
  */
-
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int __attribute__ ((unused)) argc, char *argv[])
 {
 	printf("%s\n", argv[0]);
 	return (0);
