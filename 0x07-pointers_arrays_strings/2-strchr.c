@@ -8,18 +8,13 @@
 
 char *_strchr(char *s, char c)
 {
-	unsigned short int index, inner;
 
-	for (index = 0; s[index] != '\0'; index++)
+	while(*s != '\0')
 	{
-		if (*(s + index) == c)
-		{
-			for (inner = index; s[inner] != '\0'; inner++)
-			{
-				_putchar(*(s + inner));
-			}
-			break;
-		}
+		if(*s == c)
+			return (s);
+		s++;
 	}
-	return (0);
+
+	return (NULL);
 }
