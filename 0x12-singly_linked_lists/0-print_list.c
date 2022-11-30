@@ -3,37 +3,30 @@
 /**
  * print_list - prints all data in a list
  * @h: pointer to first node
- * Return: number of nodes
+ * Return: number of nodes(count)
 */
 size_t print_list(const list_t *h)
 {
-		char *s;
-	size_t i = 0;
-	int j, k;
+	int count = 0;
 
-	while (h != NULL)
+	for (h; h; h = h->next)
 	{
-		s = h->str;
-		k = h->len;
-
-		if (s == NULL)
-		{
-			printf("[%d] (nil)", 0);
-		}
+		if(h->str)
+			printf("[%d] (nil)\n", 0);
 		else
-		{
-			printf("[%d] ", k);
-			j = 0;
+			printf("[%d] %s\n", _strlen(h->str), h->str);
 
-			while (s[j] != '\0')
-			{
-				printf("%c", s[j]);
-				j++;
-			}
-		}
-		i++;
-		printf("\n");
-		h = h->next;
+		count++;
 	}
-	return (i);
+
+	return (count);
+}
+
+int _strlen(char *s)
+{
+    int len = 0;
+    while (s && s[len])
+    len++;
+ 
+    return (len);
 }
