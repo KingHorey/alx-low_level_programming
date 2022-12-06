@@ -14,9 +14,13 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd, r_w, len;
-	/* char *buf; */
 
 	if (filename == NULL)
+		return (-1);
+
+	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+
+	if (fd == -1)
 		return (-1);
 
 	if (text_content == NULL)
@@ -27,24 +31,13 @@ int create_file(const char *filename, char *text_content)
 	{
 		len = _strlen(text_content) + 1;
 	}
-	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	/* buf = malloc(sizeof(char) * len);*/
-
-	if (fd == -1)
-		return (-1);
 
 	r_w = write(fd, text_content, len);
 
 	if (r_w == -1)
 		return (-1);
-
-	/* buf[len + 1] = '\0'; */
-
 	close(fd);
-	/*free(buf); */
-
 	return (1);
-
 }
 
 /**
