@@ -9,7 +9,7 @@
 void open_file(const char *src_file, const char *dst_file)
 {
 	char *buf;
-	int fd_one, fd_two, fd_one_r, dst_size, close_input1, close_input2, dst_write;
+	int fd_one, fd_two, fd_one_r, close_input1, close_input2, dst_write;
 
 	buf = malloc(sizeof(char) * SIZE);
 	fd_one = open(src_file, O_RDONLY);
@@ -54,7 +54,7 @@ void open_file(const char *src_file, const char *dst_file)
 
 int main(int argc, char *argv[])
 {
-	if (argc < 3)
+	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
