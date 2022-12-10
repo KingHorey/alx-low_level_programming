@@ -14,12 +14,10 @@ void open_file(const char *src_file, const char *dst_file)
 	buf = malloc(sizeof(char) * SIZE);
 	fd_one = open(src_file, O_RDONLY);
 	if (fd_one == -1)
-		exit(97);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s", src_file),exit(97);
 	fd_one_r = read(fd_one, buf, SIZE);
 	if (fd_one_r == -1)
-	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s", src_file), exit(98);
-	}
 	fd_two = open(dst_file, O_CREAT | O_RDWR | O_TRUNC, 00664);
 	if (fd_two == -1)
 	{
