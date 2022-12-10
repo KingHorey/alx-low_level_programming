@@ -21,8 +21,10 @@ void open_file(const char *src_file, const char *dst_file)
 	}
 	fd_one_r = read(fd_src, buf, SIZE);
 	if (fd_one_r == -1)
+	{
 		dprintf(2, "Error: Can't read from file %s\n", src_file);
 		exit(98);
+	}
 	fd_dst = open(dst_file, O_CREAT | O_RDWR | O_TRUNC, 00664);
 	if (fd_dst == -1)
 	{
