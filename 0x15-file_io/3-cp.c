@@ -22,13 +22,13 @@ void open_file(const char *src_file, const char *dst_file)
 	}
 	fd_two = open(dst_file, O_CREAT | O_RDWR | O_TRUNC, 00664);
 	if (fd_two == -1)
-		dprintf(STDERR_FILENO, "Error: can't write to %s", dst_file);
+		dprintf(STDERR_FILENO, "Error: can't write to %s\n", dst_file), exit(99);
 
 	while (fd_one_r)
 	{
 		dst_write = write(fd_two, buf, fd_one_r);
 		if (dst_write == -1)
-			dprintf(STDERR_FILENO, "Error: can't write to %s", dst_file);
+			dprintf(STDERR_FILENO, "Error: can't write to %s", dst_file), exit (99);
 		fd_one_r = read(fd_one, buf, SIZE);
 	}
 
