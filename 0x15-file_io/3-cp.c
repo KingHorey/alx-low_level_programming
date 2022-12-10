@@ -22,26 +22,27 @@ void open_file(const char *src_file, const char *dst_file)
 	}
 	fd_two = open(dst_file, O_CREAT | O_RDWR | O_TRUNC, 00664);
 	if (fd_two == -1)
-		dprintf(STDERR_FILENO, "Error: can't write to %s\n", dst_file), exit(99);
+	{
+		dprintf(STDERR_FILENO, "Error: can't write to %s\n", dst_file);
+		exit(99);
+	}
 
 	while (fd_one_r)
 	{
 		dst_write = write(fd_two, buf, fd_one_r);
 		if (dst_write == -1)
-			dprintf(STDERR_FILENO, "Error: can't write to %s", dst_file), exit (99);
+		{
+			dprintf(STDERR_FILENO, "Error: can't write to %s", dst_file);
+			exit(99);
+		}
 		fd_one_r = read(fd_one, buf, SIZE);
 	}
-
 	close_input1 = close(fd_one);
 	if (close_input1 == -1)
-	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_one), exit(100);
-	}
 	close_input2 = close(fd_two);
 	if (close_input2 == -1)
-	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_two), exit(100);
-	}
 	free(buf);
 }
 
