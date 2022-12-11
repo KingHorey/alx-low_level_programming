@@ -17,7 +17,7 @@ void open_file(const char *src_file, const char *dst_file)
 	if (fd_src == -1)
 	{
 		dprintf(ERR, "Error: Can't read from file %s\n", src_file);
-		exit(97);
+		exit(98);
 	}
 	fd_one_r = read(fd_src, buf, SIZE);
 	if (fd_one_r == -1)
