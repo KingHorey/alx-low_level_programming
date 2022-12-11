@@ -28,7 +28,7 @@ void open_file(const char *src_file, const char *dst_file)
 	fd_dst = open(dst_file, O_CREAT | O_RDWR | O_TRUNC, 00664);
 	if (fd_dst == -1)
 	{
-		dprintf(ERR, "Error: can't write to %s\n", dst_file);
+		dprintf(ERR, "Error: Can't write to %s\n", dst_file);
 		exit(99);
 	}
 
@@ -37,7 +37,7 @@ void open_file(const char *src_file, const char *dst_file)
 		dst_write = write(fd_dst, buf, fd_one_r);
 		if (dst_write == -1)
 		{
-			dprintf(ERR, "Error: can't write to %s\n", dst_file);
+			dprintf(ERR, "Error: Can't write to %s\n", dst_file);
 			exit(99);
 		}
 		fd_one_r = read(fd_src, buf, SIZE);
