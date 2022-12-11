@@ -25,7 +25,7 @@ void open_file(const char *src_file, const char *dst_file)
 		dprintf(ERR, "Error: Can't read from file %s\n", src_file);
 		exit(98);
 	}
-	fd_dst = open(dst_file, O_CREAT | O_RDWR | O_TRUNC, 00664);
+	fd_dst = open(dst_file, O_CREAT | O_WRONLY | O_TRUNC, 00664);
 	if (fd_dst == -1)
 	{
 		dprintf(ERR, "Error: Can't write to %s\n", dst_file);
