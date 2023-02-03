@@ -64,7 +64,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *current_item = ht->array[index];
 
 	if (current_item == NULL)
+	{
+		item->next = ht->array[index];
 		ht->array[index] = item;
+	}
 
 	return (1);
 }
