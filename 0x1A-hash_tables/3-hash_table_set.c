@@ -15,7 +15,7 @@ hash_node_t *create_node(const char *key, const char *value)
 	if ((*key == '\0') || (key == NULL))
 		return (0);
 
-       	new_node= malloc(sizeof(struct hash_node_s));
+	new_node = malloc(sizeof(struct hash_node_s));
 
 	if (!new_node)
 		return (NULL);
