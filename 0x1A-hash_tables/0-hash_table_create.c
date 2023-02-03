@@ -11,11 +11,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned int i;
 
-	hash_node_t *hash_table = malloc(sizeof(hash_table_t));
+	hash_table_t *hash_table = malloc(sizeof(hash_table_t));
 
 	if (hash_table == NULL)
 	{
-		perror("Failed to create pointer to hash table"
+		perror("Failed to create pointer to hash table");
 		return (NULL);
 	}
 
