@@ -1,16 +1,18 @@
 #include "hash_tables.h"
 
 /**
- * create_node - creates a pointer to HashTable Item
- * @key: node key
- * @value: value of the key
- * Return: Item
+ * hash_table_set - adds an element to the hash table
+ * @ht: hash table
+ * @key: string
+ * @value: value associated to the key
+ * Return: 1 if successful, 0 if not
+ *
  */
 
-
-hash_node_t *create_node(const char *key, const char *value)
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *new_node;
+	unsigned long int index = key_index((const unsigned char *)key, ht->size);
 
 	if ((*key == '\0') || (key == NULL))
 		return (0);
@@ -37,29 +39,11 @@ hash_node_t *create_node(const char *key, const char *value)
 	strcpy(new_node->value, value);
 	new_node->next = NULL;
 
-	return (new_node);
-}
-
-
-/**
- * hash_table_set - adds an element to the hash table
- * @ht: hash table
- * @key: string
- * @value: value associated to the key
- * Return: 1 if successful, 0 if not
- *
- */
-
-int hash_table_set(hash_table_t *ht, const char *key, const char *value)
-{
-	hash_node_t *item = create_node(key, value);
-	unsigned long int index = key_index((const unsigned char *)key, ht->size);
-
-	hash_node_t *current_item = ht->array[index];
-
-
-	if (current_item == NULL)
-		ht->array[index] = item;
+	if (ht->array[index] == NULL)
+	{
+		new_node->next = ht->array[index];
+		ht->array[index] = new_node;
+	}
 
 	return (1);
 }
