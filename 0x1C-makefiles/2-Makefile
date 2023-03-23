@@ -6,4 +6,4 @@ NAME = school
 all: $(NAME)
 
 school: $(SRC)
-	$(CC) $^ -o $@
+	$(CC) $? -o $@
