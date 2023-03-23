@@ -7,3 +7,6 @@ all: $(NAME)
 
 school: $(OBJ)
 	$(CC) $? -o $@
+
+%.o: %.c
+        $(CC) $^ -c $@
