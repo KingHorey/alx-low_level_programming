@@ -7,4 +7,5 @@ NAME = school
 
 $(NAME): $(OBJ)
 	$(CC) $< -o $@
-
+%.o: %.c
+        $(CC) -c $^ -o $@
