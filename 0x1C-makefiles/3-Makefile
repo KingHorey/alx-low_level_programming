@@ -1,24 +1,3 @@
-.PHONY: clean
-
-clean:
-	$(RM) *.swp
-	$(RM) *~
-
-.PHONY: oclean
-
-oclean:
-	$(RM) *.o
-
-.PHONY: fclean
-
-fclean:
-	$(RM) *.swp
-	$(RM) *~
-	$(RM) ${NAME}
-	$(RM) *.o
-.PHONY: 
-
-all: $(NAME)
 
 CC = gcc
 SRC = *.c
@@ -26,9 +5,20 @@ OBJ = *.o
 NAME = school
 RM = rm -f
 
+clean:
+	$(RM) *.swp
+	$(RM) *~
+
+oclean:
+	$(RM) *.o
+
+fclean:
+	$(RM) *.swp
+	$(RM) *~
+	$(RM) ${NAME}
+	$(RM) *.o
+
+all: $(NAME)
 
 $(NAME): $(SRC)
 	$(CC) $< -o $@
-
-$(OBJ): $(SRC)
-	$(CC) -c -o $@ $<
