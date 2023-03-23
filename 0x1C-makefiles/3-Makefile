@@ -27,5 +27,5 @@ fclean:
 	$(RM) *.o
 
 .PHONY: re
-re:
-	$(CC) $(SRC) -o $(NAME)
+re: oclean all
+
