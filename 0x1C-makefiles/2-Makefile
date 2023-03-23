@@ -5,8 +5,5 @@ NAME = school
 
 all: $(NAME)
 
-school: $(OBJ)
+$(NAME): $(OBJ)
 	$(CC) $? -o $@
-
-%.o: %.c
-        $(CC) $^ -c $@
