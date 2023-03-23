@@ -1,4 +1,4 @@
-all: $?
+all: $(NAME)
 
 CC = gcc
 SRC = %.c
