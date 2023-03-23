@@ -1,8 +1,8 @@
 all: $?
 
 CC = gcc
-SRC = *.c
-OBJ = *.o
+SRC = %.c
+OBJ = %.o
 NAME = school
 
 $(NAME): $(SRC) $(OBJ)
