@@ -9,4 +9,4 @@ $(NAME): $(OBJ)
 	$(CC) $^ -o $@
 
 $(OBJ): $(SRC)
-        $(CC) $? -c -f $@
+        $(CC) $? -c -o $@
