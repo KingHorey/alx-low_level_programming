@@ -5,23 +5,27 @@ OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm -f
 
+.PHONY: clean
 clean:
 	$(RM) *.swp
 	$(RM) *~
 
+.PHONY: oclean
 oclean:
 	$(RM) *.o
 
+.PHONY: fclean
 fclean:
 	$(RM) *.swp
 	$(RM) *~
 	$(RM) ${NAME}
 	$(RM) *.o
 
+.PHONY: re
 re:
 	$(CC) $(SRC) -o $(NAME)
 
 all: $(NAME)
 
-$(NAME): $(SRC)
+$(NAME): $(OBJ)
 	$(CC) $^ -o $@
