@@ -2,9 +2,9 @@ all: $(NAME)
 
 CC = gcc
 SRC = %.c
-OBJ = %.o
+OBJ = $(SRC:.c=.o)
 NAME = school
 
-$(NAME): $(SRC) $(OBJ)
+$(NAME): $(OBJ)
 	$(CC) $^ -o $@
 
