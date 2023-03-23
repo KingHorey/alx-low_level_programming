@@ -7,6 +7,3 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CC) $^ -o $@
-
-$(OBJ): $(SRC)
-        $(CC) -c $^ -o $@
