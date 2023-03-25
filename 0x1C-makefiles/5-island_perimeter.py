@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+""" No modules imported """
+
+
 def island_perimeter(grid):
     """ calculates the perimeter of a nested list
     taking into consideration the exposed sides in its calculation"""
