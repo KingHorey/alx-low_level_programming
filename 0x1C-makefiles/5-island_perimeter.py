@@ -22,7 +22,10 @@ def island_perimeter(grid):
 
     for a in range(length):
         if all(item == 1 for item in grid[a]):
-            perimeter += 1
+            if a == length - 1:
+                perimeter += len(cell) + 1
+            else:
+                perimeter += 1
         else:
             for b in range(len(grid[a])):
                 if grid[a][b] == 1:
