@@ -11,21 +11,22 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	if (!b)
-		return (0);
-	unsigned int decNum = 0;
+	unsigned int result;
 	unsigned int strLen = length(b);
 	unsigned int len = strLen - 1;
 	unsigned int index = len;
 	unsigned int i = 0;
+	unsigned int decNum = 0;
 
+	if (!b)
+		return 0;
 	if (strLen == 0)
 		return (0);
 	for (i = 0; i <= len ; i++)
 	{
 		if (*(b + i) < '0' || *(b + i) > '9')
 			return (0);
-		unsigned int result =  (*(b + i) - '0') * power(2, index);
+		result =  (*(b + i) - '0') * power(2, index);
 
 		index--;
 		decNum += result;
