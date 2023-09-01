@@ -1,70 +1,49 @@
 #include "main.h"
+#include <stdlib.h>
+#include "main.h"
+#include <stdio.h>
+/**
+ * powtwo - does the of two rexursively
+ * @p: what power
+ * Return: result
+ */
+
+unsigned int powtwo(unsigned int p)
+{
+	if (p == 0)
+		return (1);
+	if (p > 1)
+		return (2 * powtwo(p - 1));
+	else
+		return (2);
+}
 
 /**
- * binary_to_uint- function converts a binary number
- * to and unsigned int
- *
- * @b: Pointer to the binary number to be converted
- * Return: the converted number if *b is a binary
- * or NULL if the strig is 0 or 1
+ * binary_to_uint - converts binary to unsigned int
+ * @b: array of binary characters
+ * Return: integer not signed
  */
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int result;
-	unsigned int strLen;
-	unsigned int len;
-	unsigned int index;
-	unsigned int i = 0;
-	unsigned int decNum = 0;
+	int i = 0;
+	int j = 0;
+	unsigned int bin = 0;
 
-	if (!b || !*b)
+	if (b == NULL)
 		return (0);
-	strLen = length(b);
-	len = strLen - 1;
-	index = len;
-	for (i = 0; i <= len ; i++)
+	while (b[i] != '\0')
+		i++;
+	i--;
+
+	while (i >= 0)
 	{
-		if (*(b + i) < '0' || *(b + i) > '9')
+		if (b[j] != '1' && b[j] != '0')
 			return (0);
-		result =  (*(b + i) - '0') * power(2, index);
-
-		index--;
-		decNum += result;
+		if (b[j] == '1')
+			bin += powtwo(i);
+		i--;
+		j++;
 	}
-	return (decNum);
-}
-
-/**
- * length - function to determine the length of a string
- *  @line: pointer to the string
- *  Return: the length of the string
- */
-
-unsigned int length(const char *line)
-{
-	unsigned int len = 0;
-	unsigned int i;
-
-	for (i = 0; *(line + i) != '\0'; i++)
-	{
-		len++;
-	}
-	return (len);
-}
-
-
-/**
- * power - calculates recursively, the exponent of a number
- * @base: the base number
- * @exponent: number to raise the base by
- * Return: base if the exponent is 1 or recursively
- * get the power
- */
-
-unsigned int power(unsigned int base, unsigned int exponent)
-{
-	if (exponent == 0)
-		return (1);
-	return (base * power(base, exponent - 1));
+	return (bin);
 }

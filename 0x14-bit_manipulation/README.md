@@ -1,3 +1,2 @@
-# Bit Manipulation
+ Let us do some manipulations with bit
 
-Directory contains tasks that is/are aimed at creating functions that manipulate numbers at the bit level
