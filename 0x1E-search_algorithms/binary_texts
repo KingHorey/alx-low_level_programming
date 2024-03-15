@@ -12,7 +12,6 @@
 int binary_search(int *array, size_t size, int value)
 {
 	int r_value, i;
-
 	if (array == NULL)
 		return (-1);
 	if (size <= 0)
@@ -21,7 +20,7 @@ int binary_search(int *array, size_t size, int value)
 	if (r_value != -1)
 	{
 		i = 0;
-		while (i < (int) size)
+		while(i < (int) size)
 		{
 			if (array[i] == r_value)
 				return (i);
@@ -43,15 +42,12 @@ int binary_search(int *array, size_t size, int value)
 
 int get_value(int *array, size_t size, int value)
 {
-	int mid, i, new_size, real_size;
-
+	int mid, i, new_size;
 	if (array == NULL)
 		return (-1);
 
-	/* search the array */
 	printf("Searching in the array: ");
 	i = 0;
-
 	while (i < (int) size)
 	{
 		if (i == (int) size - 1)
@@ -60,25 +56,37 @@ int get_value(int *array, size_t size, int value)
 			printf("%d, ", array[i]);
 		i++;
 	}
+	
+	mid = size / 2;
+	new_size = size - (size / 2);
+
 	if ((size == 1) && (array[0] != value))
 		return (-1);
 
-	/* get mid point and size */
-	real_size = (int) size - 1;
-	mid = real_size / 2;
-	new_size = real_size - mid;
-
-	/* compare value with value at mid point */
-	if (array[mid] == value)
-		return (array[mid]);
-	else if (value > array[mid])
+	if (value > array[mid])
 	{
-		return (get_value(array + mid + 1, new_size, value));
+		if (size % 2 != 0)
+		{
+			new_size = new_size + 1;
+			return get_value(&array[new_size], new_size - 1, value);
+		}
+		if ((size == 2) && (array[mid] == value))
+		{
+			printf("Value is %d\n", array[mid]);
+			return (array[mid]);
+		}
+		if (array[mid] == value)
+			return (array[mid]);
+		return get_value(&array[new_size], new_size, value);
 	}
-	else if (value < array[mid])
+	if (value < array[mid])
 	{
-		return (get_value(array, mid, value));
+		if (array[mid] == value)
+		{
+			printf("Value is %d\n", array[mid]);
+			return (array[mid]);
+		}
+		return get_value(array, new_size - 1, value);
 	}
-
 	return (-1);
 }
