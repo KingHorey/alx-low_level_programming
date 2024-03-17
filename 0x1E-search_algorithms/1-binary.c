@@ -49,7 +49,7 @@ int get_value(int *array, size_t size, int value)
 		return (-1);
 
 	/* search the array */
-	printf("Searching in the array: ");
+	printf("Searching in array:");
 	i = 0;
 
 	while (i < (int) size)
