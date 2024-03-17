@@ -49,13 +49,13 @@ int get_value(int *array, size_t size, int value)
 		return (-1);
 
 	/* search the array */
-	printf("Searching in array:");
+	printf("Searching in array: ");
 	i = 0;
 
 	while (i < (int) size)
 	{
 		if (i == (int) size - 1)
-			printf("%d \n", array[i]);
+			printf("%d\n", array[i]);
 		else
 			printf("%d, ", array[i]);
 		i++;
